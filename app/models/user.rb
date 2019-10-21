@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   mount_uploader :photo, PhotoUploader
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
-  acta_as_voter
+  acts_as_voter
 end

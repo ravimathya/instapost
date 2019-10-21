@@ -18,6 +18,14 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
+    def upvote
+
+    end
+
+    def downvote
+
+    end
+
     def create
       @post = current_user.posts.create(post_params)
       if @post.valid?
