@@ -66,3 +66,13 @@ gem 'bootstrap', '~> 4.3.1'
 
 #for jquery
 gem 'jquery-rails'
+
+# for devise (for user authentication)
+gem 'devise'
+
+
+#for carrierwave (for uploading image)
+gem 'carrierwave'
+
+# for form
+gem 'simple_form'
