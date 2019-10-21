@@ -76,3 +76,6 @@ gem 'carrierwave'
 
 # for form
 gem 'simple_form'
+
+# for acts as votable (for like, dislike, vote etc)
+gem 'acts_as_votable', '~> 0.10.0'
