@@ -6,5 +6,5 @@ class Post < ApplicationRecord
 
     validates :photo, :description, :user_id, presence: true
 
-    acts_As_votable
+    acts_as_votable
 end

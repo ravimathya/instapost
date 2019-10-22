@@ -5,24 +5,57 @@ body {
 nav {
     border-bottom: 1px solid #DBDBDB;
     background-color: #FFFFFF;
-    height: 76px;
+}
+
+.navbar-default {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.navbar {
+    min-height: 78px;
+}
+
+.wrap {
+    padding: 0 0 45px;
 }
 
 .brand {
     font-family: 'Satisfy', cursive;
-    font-size: 26px;
+    font-size: 28px;
     vertical-align: middle;
 }
 
-.nav_links {
+.head-size {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.nav_links a {
     vertical-align: middle;
     font-size: 16px;
     font-weight: 500;
-    margin: 0 20px;
+    margin: 0 15px;
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover,
+a:link,
+a:focus,
+a:active {
+    text-decoration: none;
 }
 
 .nav_wrapper {
     line-height: 78px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .photo {
@@ -57,6 +90,14 @@ nav {
     color: #a5a7aa;
     font-weight: 500;
 }
+
+.post_like {
+    .fa {
+        font-size: 20px;
+    }
+}
+
+/* end */
 
 
 /* css for show.html.erb for users */
