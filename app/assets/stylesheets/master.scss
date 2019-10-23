@@ -102,9 +102,12 @@ a:active {
 
 /* css for show.html.erb for users */
 .prof_header {
-    height: 100%;
     padding: 60px 20px 0px;
     margin-bottom: 45px;
+}
+
+.user_header {
+    margin-left: 50px;
 }
 
 .username {
@@ -120,17 +123,17 @@ a:active {
 }
 
 .prof_show {
-    width: 100%;
-    height: 100%;
-    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px 20px 0px;
 }
 
 .prof_post_box {
     margin-bottom: 50px;
+    padding: 0px 20px 0px;
 }
 
 .user_edit_button {
-    margin-top: 25px;
     border-color: #818488;
     color: #818488;
 }

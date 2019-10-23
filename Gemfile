@@ -82,3 +82,6 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 # for font
 gem 'font-awesome-sass', '~> 4.6.2'
+
+# for infinite scrolling
+gem 'will_paginate'
