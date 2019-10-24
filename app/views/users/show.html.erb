@@ -1,44 +1,35 @@
-<!-- users/show.html.erb -->  
+<!-- users/show.html.erb -->
 <div class="prof_header">
-
   <div class="row">
-
     <div class="col-xs-4">
       <%= image_tag @user.photo.url.to_s, class: 'prof_pic' %>
     </div>
-
     <div class="col-xs-8 user_header">
-
       <div class="row">
         <div class="col-xs-6">
-          <h1 class = "username"><%= @user.name %></h1>
+          <h1 class="username"><%= @user.name %></h1>
+          <% if user_signed_in? &&  @user!= current_user%>
+            <% if current_user.following?(@user) %>
+              <%= link_to 'Unfollow', follow_path(user_id: @user.id), method: :delete, class: 'btn btn-primary' %>
+            <% else %>
+              <%= link_to 'Follow', follows_path(user_id: @user.id), method: :post, class: 'btn btn-primary' %>
+            <% end %>
+          <% end %>
         </div>
-
         <div class="col-xs-6 ml-5">
           <%= link_to 'EDIT PROFILE', edit_user_registration_path(@user), class: 'user_edit_button btn btn-default' if user_signed_in? && @user == current_user %>
         </div>
-      </div>  
-
+      </div>
       <span class="count"><%= @user.posts.count %></span> posts
-
     </div>
-
   </div>
-
 </div>
-
-
 <div class="prof_post_box">
-
   <div class="row">
-
     <% @user.posts.each do |post| %>
-
-        <div class="col-xs-6">
-          <%= image_tag post.photo.url.to_s, class: 'prof_show' %>
-        </div>
-
+      <div class="col-xs-6">
+        <%= image_tag post.photo.url.to_s, class: 'prof_show' %>
+      </div>
     <% end %>
-
   </div>
 </div>
