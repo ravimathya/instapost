@@ -1,5 +1,5 @@
 $('#follow-button').attr('class', 'btn unfollow-button')
-    .text('Following')
-    // .attr('href', "/<%= @user %>/destroy")
-    .attr('method', 'delete')
-    .attr('id', 'unfollow-button');
+.text('Following')
+.attr('href', "/follows/<%= @user.id %>?user_id=<%= @user.id %>")
+.attr('data-method', 'delete')
+.attr('id', 'unfollow-button');
